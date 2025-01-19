@@ -34,11 +34,11 @@ class Person(models.Model):
         return self.name
 
 class Osoba(models.Model):
-    PLEC_CHOICES = (
+    PLEC_CHOICES = [
         ("K", "Kobieta"),
         ("M", "Męzczyzna"),
         ("I", "Inna"),
-    )
+    ]
     imie = models.CharField(max_length=40, blank = False, null = False)
     nazwisko = models.CharField(max_length=60, blank = False, null = False)
     plec = models.IntegerField(choices=PLCIE.choices, default=PLCIE.choices[2][0])

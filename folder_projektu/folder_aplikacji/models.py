@@ -7,6 +7,8 @@ MONTHS = models.IntegerChoices('Miesiace', 'Styczeń Luty Marzec Kwiecień Maj C
 PLCIE = models.IntegerChoices('PLEC', 'Kobieta Męzczyzna Inna')
 
 
+PLCIE = models.IntegerChoices('PLEC', 'Kobieta','Męzczyzna','Inna')
+
 SHIRT_SIZES = (
         ('S', 'Small'),
         ('M', 'Medium'),
@@ -30,7 +32,7 @@ class Person(models.Model):
 
     def __str__(self):
         return self.name
-    
+
 class Osoba(models.Model):
     PLEC_CHOICES = (
         ("K", "Kobieta"),
@@ -46,9 +48,7 @@ class Osoba(models.Model):
     
     def __str__(self):
         return f'{self.imie} {self.nazwisko}' 
-    
-    class Meta: 
-        ordering = ["-nazwisko"]
+   
 
 class Stanowisko(models.Model):
     nazwa = models.CharField(max_length=80, blank = False, null = False)
@@ -56,3 +56,4 @@ class Stanowisko(models.Model):
     
     def __str__(self):
         return self.nazwa
+

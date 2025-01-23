@@ -4,10 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('folder_aplikacji', '0006_osoba_data_dodania'),
-    ]
+    ('folder_aplikacji', '0006_alter_osoba_plec'),
+]
+
+
+   
+
+
 
     operations = [
         migrations.AlterField(

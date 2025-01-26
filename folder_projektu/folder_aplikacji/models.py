@@ -48,7 +48,10 @@ class Osoba(models.Model):
     data_dodania = models.DateField(auto_now_add = True, editable = False)
     
     def __str__(self):
-        return f'{self.imie} {self.nazwisko}' 
+        return f'{self.imie} {self.nazwisko}'
+
+    class Meta :
+        ordering = ["nazwisko"]
 
 class Stanowisko(models.Model):
     nazwa = models.CharField(max_length=80, blank = False, null = False)

@@ -100,3 +100,4 @@ class OsobaSerializer(serializers.ModelSerializer):
         model = Osoba
         fields = ['id', 'imie', 'nazwisko', 'plec', 'stanowisko', 'data_dodania']
         read_only_fields = ['id']
+
